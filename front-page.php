@@ -28,7 +28,7 @@
   global $post;
   $myposts = get_posts('numberposts=3');
   foreach($myposts as $post) :
-    setup_postdata($post);
+    setup_postdata($post); 
 ?>
   <li>
   <a href="<?php the_permalink(); ?>">
