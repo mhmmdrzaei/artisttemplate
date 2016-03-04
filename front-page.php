@@ -17,12 +17,15 @@
   </div> <!-- /.main -->
 
 </div> <!-- /.content -->
-<div class="content">
+
+<div class="contentGallery">
+
 <?php
   if (is_front_page()) {
 ?>
-  <h1>Works</h1>
+  
   <div class="gallery">
+  <h1 class="h1Works">Works</h1>
     <ul>
 <?php
   global $post;
@@ -32,15 +35,16 @@
 ?>
   <li>
   <a href="<?php the_permalink(); ?>">
-    <?php the_post_thumbnail() ?>
-    <?php the_title(); ?>
-  </a>
+    <img src="<?php echo hackeryou_get_thumbnail_url($post) ?>" alt="">
+    <?php the_title(); ?></a>
+    <div class="excerpt"><?php  the_excerpt(); ?></div>
+  
   </li>
 <?php endforeach;
 }
 ?>
 </ul>
-<div class="readmore"><a href="<?php echo get_permalink(24) ?>">Read More</a></div>
+<div class="readmore"><a href="<?php echo get_permalink(16) ?>">See More</a></div>
 </div>
 
   

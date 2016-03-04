@@ -34,7 +34,12 @@ h1{
 	@include fontSize(30);
 	font-family: $font-header;
 	color:white;
+
 }
+h1.h1Works {
+			color:black;
+			text-align: center;
+		}
 h2{
 	@include fontSize(20);
 	font-family: $font-header;
@@ -96,7 +101,7 @@ ul.menu{
 }
 
 .hero{
-	// background-image: url('images/hero2.jpg');
+	background-image: url('images/hero2.jpg');
 	background-repeat:no-repeat;
 	background-size: cover;
 	background-position: center;
@@ -112,7 +117,7 @@ ul.menu{
 // Main Page 
 
 .aboutMainMain{
-	padding: 50px;
+	padding-top: 50px;
 }
 
 .main {
@@ -126,11 +131,13 @@ ul.menu{
 }
 .readmore {
 	margin: 0 auto;
-	width: 150px;
+	width: 155px;
 	border:3px solid black;
 	font-family: $font-header;
-	padding: 10px;
+	padding: 12px;
     text-transform: uppercase;
+    text-align: center;
+
    	a {
    		color:black;
    		&:hover {
@@ -139,6 +146,7 @@ ul.menu{
    	}
    	&:hover {
    		background:black;
+   		color: white;
    	}
 
 
@@ -156,10 +164,47 @@ ul.menu{
 	width: 80%;
 	padding: 0 50px;
 }
-
+.contentGallery {
+	margin: 0 auto;
+}
 .gallery {
+	margin: 0 auto;
+	padding: 50px 0;
 	ul {
 		display: flex;
+		// padding: 0 10%;
+		padding: 0;
+		margin: 0 auto;
+		// margin-right: 11px;
+		li{
+			// padding: 10px
+			margin: 0 auto;
+			padding: 30px;
+			.excerpt{
+				color: black;
+
+			}
+
+
+		}
+		img {
+			padding: 0;
+			border: 5px solid black;
+			display: block;
+
+		}
+		a {
+			margin: 0 auto;
+			padding: 5px 0;
+			// width: 100%;
+			@include fontSize(12);
+			font-family: $font-header;
+			color:black;
+
+		}
+
+		// width:50%;
+		// margin: 0 auto;
 	}
 }
 
