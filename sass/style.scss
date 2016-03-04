@@ -1,0 +1,276 @@
+/*
+* Theme Name: HackerYou Starter Theme
+* Theme URI: http://hackeryou.com;
+* Description: Starter theme for building any website. Created by HackerYou. * Rename this to your own theme page.
+* Version: 1.0
+* Author: HackerYou
+* Author URI: http://hackeryou.com
+*/
+$font-body: 'EB Garamond', serif;;
+$font-header: 'Montserrat', sans-serif;
+@import "setup";
+
+@mixin fontSize($sizeValue){
+    font-size: $sizeValue * 1px;
+    font-size: ($sizeValue/10) * 1rem;
+}
+.flex {
+	display: flex;
+	flex-flow: row wrap;
+}
+
+
+body{
+	color: white;
+}
+
+
+.wrapper{
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
+h1{
+	@include fontSize(30);
+	font-family: $font-header;
+	color:white;
+}
+h2{
+	@include fontSize(20);
+	font-family: $font-header;
+}
+h3{
+	@include fontSize(10);
+	font-family: $font-header;
+}
+
+a{
+	text-decoration: none;
+
+}
+p {
+	font-family: $font-body;
+}
+
+header{
+
+	.wrapper{
+	display: flex;
+	align-items: center;
+	text-transform: uppercase;
+	}
+}
+
+
+
+
+a, nav {
+	        flex: 1;
+	        padding: 10px;
+}
+
+
+
+ul.menu{
+
+	display: flex;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.menu {
+	li{
+	flex: 1;
+	padding: 10px;
+	a{
+	color: white;
+	&:hover {
+		color:#65752E;
+	}
+	}
+
+	}
+
+
+}
+
+.hero{
+	// background-image: url('images/hero2.jpg');
+	background-repeat:no-repeat;
+	background-size: cover;
+	background-position: center;
+	height: 100vh;
+	display: flex;
+	align-items: left;
+}
+
+.content{
+	display: flex;
+
+}
+// Main Page 
+
+.aboutMainMain{
+	padding: 50px;
+}
+
+.main {
+	padding: 50px;
+	margin: 0 auto;
+	text-align: center;
+}
+.aboutMain {
+	padding: 70px;
+	border: 7px solid black;
+}
+.readmore {
+	margin: 0 auto;
+	width: 150px;
+	border:3px solid black;
+	font-family: $font-header;
+	padding: 10px;
+    text-transform: uppercase;
+   	a {
+   		color:black;
+   		&:hover {
+		color:white;
+	}
+   	}
+   	&:hover {
+   		background:black;
+   	}
+
+
+	
+}
+
+.staticPage{
+	background: #fff;
+	color: black;
+}
+
+.main{
+	background: #fff;
+	color: #000;
+	width: 80%;
+	padding: 0 50px;
+}
+
+.gallery {
+	ul {
+		display: flex;
+	}
+}
+
+// .sidebar{
+// 	background: #E4C3C9;
+// 	width: 20%;
+// 	padding: 20px;
+// 	margin: 0;
+// 	list-style: none;
+// }
+
+// .sidebar h3{
+// 	font-size: 25px;
+// 	text-transform: uppercase;
+// }
+
+// .sidebar ul{
+// 	list-style: none;
+// 	padding: 0;
+// }
+
+// .sidebar a{
+// 	color: white;
+// }
+
+
+// input{
+// 	margin: 5px 0;
+// 	padding: 5px;
+// }
+// input[type=submit]{
+// 	background: #474662;
+// 	color: white;
+// 	text-transform: uppercase;
+// 	border: none;
+
+// }
+
+footer{
+	color:black;
+	border-top: 4px solid black;
+	.menu li a {
+		color: black;
+	}
+	nav {
+			justify-content: space-between;
+		}
+
+	.wrapper{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+		p {
+		justify-content: flex-start; 
+		width: 70%;
+	}
+		
+
+	}
+	
+	
+
+}
+.blog{
+	background: white;
+	color: black;
+}
+
+.blog article{
+	display: flex;
+	padding: 50px 0;
+	align-items: center;
+}
+
+.author img{
+	border-radius: 50%;
+	border: 10px solid #E4C3C9;
+}
+
+.author a{
+	text-align: center;
+	font-weight:bold;
+}
+
+
+.blogpost{
+	padding-left: 10px;
+}
+
+.blogpost h2{
+	border-bottom: 2px solid black;
+	text-transform: uppercase;
+	font-size: 40px;
+}
+
+.blogpost h3{
+	font-size: 30px;
+}
+
+
+article:nth-child(odd) .author{
+	-webkit-box-ordinal-group: 3;
+	-webkit-order: 2;
+	    -ms-flex-order: 2;
+	        order: 2;
+}
+
+article:nth-child(odd) .author img{
+	border: 10px solid white;
+}
+
+article:nth-child(odd) .blogpost{
+	padding-right: 10px;
+}
