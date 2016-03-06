@@ -300,6 +300,7 @@ footer{
 	header {
 		.hero {
 			display: cover;
+			max-height: 260px;
 		}
 		
 	}
@@ -323,8 +324,35 @@ footer{
 	.logo {
 		display: none;
 	}
+//works
+
+	.contentWorks {
+			article {
+				padding: 10px;
+				margin:20px auto;
+			}
+		}
+		.main {
+			padding: 11px;
+		}
+//posts 
+  .posts {
+  	margin:0;
+  	padding: 0;
+  }
+	//footer 
+
+		footer {
+		ul.menu {
+			display: flex;
+		}
+
+		}
+		
 	 
+
 }
+
 
 
 @media(max-width: 490px){
@@ -337,7 +365,15 @@ footer{
 		padding: 10px 15px;
 		color: white;
 		cursor: pointer;
+		position: relative;
+		left: -115px;
+		top: 0px;
 		}
+	}
+	ul.menu {
+		display: block; 
+		width: 100%;
+		border: 3px solid white;
 	}
 
 	.menu{
@@ -361,11 +397,13 @@ footer{
 		color: #73DD72;
 		padding-left: 15px;
 		}
-
-	
+	//footer
+	footer {
+			p {
+				display: none;
+			}
+		}
 }
-
-// menu-primary-navigation
  
 		
 // 		
