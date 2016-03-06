@@ -3,7 +3,7 @@
 <div class="main">
   <div class="wrapper">
 
-    <div class="content">
+    <div class="content posts">
       <?php // Start the loop ?>
       <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 

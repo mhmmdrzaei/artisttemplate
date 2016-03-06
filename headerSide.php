@@ -16,7 +16,6 @@
 <body <?php body_class(); ?>>
 
 <header>
-   <div class="hero" style="background-image:url(<?php echo hackeryou_get_thumbnail_url(24) ?>)"  >
 <!-- SET AS FEATURED IMAGE -->
 
   <div class="wrapper">
@@ -27,16 +26,11 @@
         </a>
     
 
-   <nav class>
-      <div class="fa fa-bars fa-2x" title="menu"></div>
-      <div class="dropdown">
-        
+   <nav>
       <?php wp_nav_menu( array(
          'container' => false,
          'theme_location' => 'primary'
        )); ?>
-      </div>
-      
    </nav>
   </div> <!-- /.wrapper -->
 </div><!-- /.hero-->

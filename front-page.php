@@ -24,12 +24,12 @@
   if (is_front_page()) {
 ?>
   
-  <div class="gallery">
+  <div class="gallery wrapper">
   <h1 class="h1Works">Works</h1>
     <ul>
 <?php
   global $post;
-  $myposts = get_posts('numberposts=3');
+  $myposts = get_posts('numberposts=2');
   foreach($myposts as $post) :
     setup_postdata($post); 
 ?>

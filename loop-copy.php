@@ -18,16 +18,13 @@
 	
 	<article>
 		<h2><a href="<?php the_permalink(); ?> "><?php the_title(); ?></a></h2>
-		<h3>phosted on<?php the_date('j, n, n, a, Y'); ?> i guess by <?php the_author(); ?></h3>
+		<div class="excerpt"><?php  the_excerpt(); ?></div>
 		<?php 
 				// print_r($post);
 				
 
 			 ?>
 			 <img src="<?php echo hackeryou_get_thumbnail_url( $post ) ?> " >
-
-		<?php the_post_thumbnail() ?>
-		<?php the_excerpt(); ?>
 		
 	</article>
 <?php endwhile; // End the loop. Whew. ?>
