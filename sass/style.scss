@@ -117,6 +117,12 @@ ul.menu{
 
 
 }
+.dropdown {
+	display: flex;
+}
+.dropdownHide {
+	display: none;
+}
 // Main Page 
 
 .aboutMainMain{
@@ -124,7 +130,7 @@ ul.menu{
 }
 
 .aboutMain {
-	padding: 70px;
+	padding: 50px;
 	border: 7px solid black;
 }
 .readmore {
@@ -168,7 +174,7 @@ ul.menu{
 }
 .gallery {
 	margin: 0 auto;
-	padding: 50px 0;
+	padding: 20px 0;
 	ul {
 		display: flex;
 		// padding: 0 10%;
@@ -225,10 +231,11 @@ ul.menu{
 	display: block;
 	article {
 		width: 100%;
-		margin: 0 auto;
+		margin: 50px auto;
 		border: 5px solid black;
-		// padding: 50px;
-		margin: 50px;
+		padding: 20px;
+		// margin: 20px;
+		display: flex;
 		h2 {
 			width: 70%;
 			text-align: center;
@@ -241,7 +248,7 @@ ul.menu{
 			}
 		}
 		img {
-			padding: 0 50px;
+			padding: 0 10px;
 			width: 100%;
 		}
 	}
@@ -296,7 +303,23 @@ footer{
 		}	
 
 //media queries
+@media(max-width: 900px){
+	.main {
+		width: 100%;
+	}
+	.contentWorks {
+	article {
+		padding:0;
+    	margin: 30px 5px;
+		// display: block;
+		img {
+			padding: 10px;
+		}
+		}
+	}
+}
 @media(max-width: 660px){
+	
 	header {
 		.hero {
 			display: cover;
@@ -324,12 +347,15 @@ footer{
 	.logo {
 		display: none;
 	}
+
+	
 //works
 
 	.contentWorks {
 			article {
 				padding: 10px;
 				margin:20px auto;
+				display: block;
 			}
 		}
 		.main {
@@ -356,9 +382,26 @@ footer{
 
 
 @media(max-width: 490px){
-	display: block;
+	header {
+		.wrapper {
+			width: 100%;
+		}
+		ul.menu {
+			position: relative;
+			left:-103px;
+		}
+	}
+	.dropdown {
+		display: none;
+}
+	.dropdownHide {
+		display: block;
+	}
+	
 	nav {
 		padding: 0;
+		margin: 0;
+		width: 100%;
 		display: block;
 		.fa-bars {
 		display: block;
@@ -374,7 +417,9 @@ footer{
 		display: block; 
 		width: 100%;
 		border: 3px solid white;
-	}
+		position: relative;
+    	left: 0px;
+			}
 
 	.menu{
 		// display: none;

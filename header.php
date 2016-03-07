@@ -29,6 +29,7 @@
 
    <nav class>
       <div class="fa fa-bars fa-2x" title="menu"></div>
+    
       <div class="dropdown">
         
       <?php wp_nav_menu( array(
