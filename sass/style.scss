@@ -6,7 +6,7 @@
 * Author: HackerYou
 * Author URI: http://hackeryou.com
 */
-$font-body: 'EB Garamond', serif;;
+$font-body: 'EB Garamond', serif;
 $font-header: 'Montserrat', sans-serif;
 @import "setup";
 
@@ -31,7 +31,7 @@ body{
 }
 
 h1{
-	@include fontSize(30);
+	@include fontSize(25);
 	font-family: $font-header;
 	color:white;
 
@@ -64,6 +64,9 @@ header{
 	align-items: center;
 	text-transform: uppercase;
 	}
+	nav {
+	text-shadow: 4px 4px 2px rgba(150, 150, 150, 1);
+}
 }
 
 
@@ -72,6 +75,10 @@ header{
 a, nav {
 	        flex: 1;
 	        padding: 10px;
+	        
+}
+nav {
+	@include fontSize(12);
 }
 
 nav .fa-bars {
@@ -103,13 +110,16 @@ ul.menu{
 }
 
 .hero{
-	background-image: url('images/hero2.jpg');
 	background-repeat:no-repeat;
 	background-size: cover;
-	background-position: center;
-	height: 100vh;
+	height: 300px;
 	display: flex;
-	align-items: left;
+
+}
+.logo {
+	h1 {
+		margin: 0 6px;
+	}
 }
 
 .content{
@@ -119,6 +129,7 @@ ul.menu{
 }
 .dropdown {
 	display: flex;
+
 }
 .dropdownHide {
 	display: none;
@@ -131,16 +142,19 @@ ul.menu{
 
 .aboutMain {
 	padding: 50px;
-	border: 7px solid black;
+	border-top: 5px dashed black;
+	border-bottom: 5px dashed black;
+
 }
 .readmore {
-	margin: 0 auto;
+	margin: 35px auto 0;
 	width: 160px;
 	border:3px solid black;
 	font-family: $font-header;
 	padding: 12px;
     text-transform: uppercase;
     text-align: center;
+
 
    	a {
    		color:black;
@@ -166,7 +180,7 @@ ul.menu{
 	background: #fff;
 	color: #000;
 	width: 90%;
-	padding: 0 40px;
+	padding: 0 20px;
 	margin: 0 auto;
 }
 .contentGallery {
@@ -174,7 +188,7 @@ ul.menu{
 }
 .gallery {
 	margin: 0 auto;
-	padding: 20px 0;
+	padding: 30px 15px;
 	ul {
 		display: flex;
 		// padding: 0 10%;
@@ -184,9 +198,10 @@ ul.menu{
 		li{
 			// padding: 10px
 			margin: 0 auto;
-			padding: 30px;
+			padding: 5px;
 			.excerpt{
 				color: black;
+				width:93%;
 
 			}
 
@@ -194,7 +209,7 @@ ul.menu{
 		}
 		img {
 			padding: 0;
-			border: 5px solid black;
+			// border: 5px solid black;
 			display: block;
 			width: 100%;
 			max-height: 275px;
@@ -216,14 +231,18 @@ ul.menu{
 
 // about section
 .posts {
-	padding: 50px;
+	margin-bottom: 30px;
     width: 100%;
-    margin: 50px;
-    border: 5px solid;
+    border-top: 5px dashed;
+   	border-bottom: 5px dashed;
+    min-height: 300px;
+    h2 {
+    	margin-left: 20px;
+    }
      p{
-     	padding:50px;
+     	// padding:50px;
      	width: 100%;
-     	text-align: left;
+     	text-align: center;
      }
 }
 // works
@@ -232,14 +251,14 @@ ul.menu{
 	article {
 		width: 100%;
 		margin: 50px auto;
-		border: 5px solid black;
+		border-top: 5px dashed black;
 		padding: 20px;
 		// margin: 20px;
 		display: flex;
 		h2 {
-			width: 70%;
+			width: 80%;
 			text-align: center;
-			padding: 10px;
+			padding: 5px;
 			a {
 				color: black;
 				&:hover {
@@ -257,7 +276,7 @@ ul.menu{
 .entry-content {
 	p {
 		text-align: left;
-		padding: 10px;
+		padding: 20px 0;
 		border-bottom: 5px dashed black;
 	}
 }
@@ -280,6 +299,8 @@ footer{
 	}
 	nav {
 			justify-content: space-between;
+			
+
 		}
 
 	.wrapper{
@@ -314,6 +335,7 @@ footer{
 		// display: block;
 		img {
 			padding: 10px;
+			max-height: 200px;
 		}
 		}
 	}
@@ -356,6 +378,9 @@ footer{
 				padding: 10px;
 				margin:20px auto;
 				display: block;
+				img {
+					max-height: 100%;
+				}
 			}
 		}
 		.main {
@@ -381,43 +406,52 @@ footer{
 
 
 
-@media(max-width: 490px){
+@media(max-width: 520px){
 	header {
 		.wrapper {
-			width: 100%;
+			// width: 100%;
 		}
 		ul.menu {
-			position: relative;
-			left:-103px;
+			// position: relative;
+			// left:-103px;
 		}
 	}
 	.dropdown {
 		display: none;
+		position: fixed;
+		    top: 38px;
+		    left: 82px;
+		    background: grey;
+		    opacity: .9;
+		    width: 50%;
+		    z-index: 999;
 }
 	.dropdownHide {
-		display: block;
+			display: block;
+
 	}
 	
 	nav {
 		padding: 0;
 		margin: 0;
-		width: 100%;
+		// width: 100%;
 		display: block;
 		.fa-bars {
 		display: block;
 		padding: 10px 15px;
 		color: white;
 		cursor: pointer;
-		position: relative;
-		left: -115px;
-		top: 0px;
+		position: fixed;
+    	top: 24px;
+    	left: 10px;
+    	z-index: 9999;
 		}
 	}
 	ul.menu {
 		display: block; 
-		width: 100%;
+		// width: 100%;
 		border: 3px solid white;
-		position: relative;
+		// position: relative;
     	left: 0px;
 			}
 
@@ -427,10 +461,10 @@ footer{
 		overflow: hidden;
 		li {
 		display: block;
-		width: 100%;
+		// width: 100%;
 		padding: 0;
 		a{
-			width: 100%;
+			// width: 100%;
 			display: block;
 		}
 		// flex:none;

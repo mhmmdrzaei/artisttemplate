@@ -5,6 +5,7 @@
   <div class="main">
 
     <div class="wrapper">
+    <h1 class="h1Works">About</h1>
      <div class="aboutMain"> <?php // Start the loop ?>
        <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
            <?php the_content(); ?>
@@ -29,7 +30,7 @@
     <ul>
 <?php
   global $post;
-  $myposts = get_posts('numberposts=2');
+  $myposts = get_posts('numberposts=3');
   foreach($myposts as $post) :
     setup_postdata($post); 
 ?>

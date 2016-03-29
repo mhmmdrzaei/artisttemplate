@@ -16,8 +16,10 @@
 <body <?php body_class(); ?>>
 
 <header>
-   <div class="hero" style="background-image:url(<?php echo hackeryou_get_thumbnail_url(24) ?>)"  >
+  <?php $image = get_field('header_image') ?> 
+   <div class="hero" style="background-image: url(<?php echo $image['sizes']['large'] ?>)"  >
 <!-- SET AS FEATURED IMAGE -->
+
 
   <div class="wrapper">
     
